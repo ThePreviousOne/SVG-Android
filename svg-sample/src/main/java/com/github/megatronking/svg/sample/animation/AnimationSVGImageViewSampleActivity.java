@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.animation.LinearInterpolator;
 
 import com.github.megatronking.svg.sample.R;
-import com.github.megatronking.svg.support.extend.SVGImageView;
 
 public class AnimationSVGImageViewSampleActivity extends AppCompatActivity {
 

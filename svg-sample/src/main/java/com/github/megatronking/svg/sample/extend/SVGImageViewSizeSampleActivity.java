@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.github.megatronking.svg.sample.R;
 import com.github.megatronking.svg.sample.utils.DimenUtils;
-import com.github.megatronking.svg.support.extend.SVGImageView;
 
 public class SVGImageViewSizeSampleActivity extends AppCompatActivity {
 

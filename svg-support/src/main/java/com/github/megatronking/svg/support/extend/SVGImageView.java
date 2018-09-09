@@ -39,6 +39,7 @@ public class SVGImageView extends ImageView {
     private int mSvgWidth;
     private int mSvgHeight;
     private float mSvgRotation;
+    private int mSvgScale;
 
     public SVGImageView(Context context) {
         this(context, null);
@@ -75,6 +76,15 @@ public class SVGImageView extends ImageView {
 
     public void setSvgWidth(int width) {
         this.mSvgWidth = width;
+        resetImageDrawable();
+    }
+
+    public int getSvgScale() { return mSvgScale; }
+
+    public setSvgScale(int scale) {
+        this.mSvgWidth = scale;
+        this.mSvgHeight = scale;
+        this.mSvgScale = scale;
         resetImageDrawable();
     }
 
