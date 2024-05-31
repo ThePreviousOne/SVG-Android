@@ -1,12 +1,11 @@
 package com.github.megatronking.svg.sample.extend;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.megatronking.svg.sample.R;
 import com.github.megatronking.svg.support.extend.SVGEditText;
-
 
 public class SVGEditTextRotationSampleActivity extends AppCompatActivity {
 

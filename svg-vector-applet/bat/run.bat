@@ -1,1 +1,0 @@
-java -jar svg2vector-applet-1.0.1.jar

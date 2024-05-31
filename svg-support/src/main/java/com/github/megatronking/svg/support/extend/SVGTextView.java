@@ -18,7 +18,8 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+
 import android.util.AttributeSet;
 import android.widget.TextView;
 
@@ -398,7 +399,7 @@ public class SVGTextView extends TextView {
     }
 
     private void resetDrawable(Drawable drawable, CompoundSVGParameter svgParameter) {
-        if (drawable != null && drawable instanceof SVGDrawable) {
+        if (drawable instanceof SVGDrawable) {
             drawable.mutate();
             ((SVGDrawable)drawable).setTintList(svgParameter.svgColor);
             if (svgParameter.svgAlpha > 0 && svgParameter.svgAlpha <= 1.0f) {

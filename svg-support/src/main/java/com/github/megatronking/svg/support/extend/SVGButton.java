@@ -18,9 +18,10 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.widget.Button;
+
+import androidx.annotation.Nullable;
 
 import com.github.megatronking.svg.support.R;
 import com.github.megatronking.svg.support.SVGDrawable;

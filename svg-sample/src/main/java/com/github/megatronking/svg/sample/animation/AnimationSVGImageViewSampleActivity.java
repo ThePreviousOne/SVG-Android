@@ -4,8 +4,9 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.animation.LinearInterpolator;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.megatronking.svg.sample.R;
 import com.github.megatronking.svg.support.extend.SVGImageView;

@@ -1,0 +1,22 @@
+[versions]
+agp = "8.4.1"
+dom4j = "1.6.1"
+jaxen = "1.1.6"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.7.0"
+kotlinBom = "1.9.20"
+
+[libraries]
+dom4j = { module = "dom4j:dom4j", version.ref = "dom4j" }
+jaxen = { module = "jaxen:jaxen", version.ref = "jaxen" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlinBom" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }

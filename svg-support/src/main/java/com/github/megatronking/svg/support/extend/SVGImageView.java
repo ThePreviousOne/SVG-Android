@@ -19,7 +19,8 @@ import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -39,6 +40,7 @@ public class SVGImageView extends ImageView {
     private int mSvgWidth;
     private int mSvgHeight;
     private float mSvgRotation;
+    private int mSvgScale;
 
     public SVGImageView(Context context) {
         this(context, null);
@@ -75,6 +77,15 @@ public class SVGImageView extends ImageView {
 
     public void setSvgWidth(int width) {
         this.mSvgWidth = width;
+        resetImageDrawable();
+    }
+
+    public int getSvgScale() { return mSvgScale; }
+
+    public void setSvgScale(int scale) {
+        this.mSvgWidth = scale;
+        this.mSvgHeight = scale;
+        this.mSvgScale = scale;
         resetImageDrawable();
     }
 
@@ -131,9 +142,9 @@ public class SVGImageView extends ImageView {
     private void resetDrawable(Drawable drawable) {
         if (drawable != null && drawable instanceof SVGDrawable) {
             drawable.mutate();
-            ((SVGDrawable)drawable).setTintList(mSvgColor);
+            drawable.setTintList(mSvgColor);
             if (mSvgAlpha > 0 && mSvgAlpha <= 1.0f) {
-                ((SVGDrawable)drawable).setAlpha((int) (mSvgAlpha * 0xFF));
+                drawable.setAlpha((int) (mSvgAlpha * 0xFF));
             }
             if (mSvgWidth > 0) {
                 ((SVGDrawable)drawable).setWidth(mSvgWidth);

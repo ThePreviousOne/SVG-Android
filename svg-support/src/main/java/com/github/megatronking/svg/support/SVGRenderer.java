@@ -104,4 +104,7 @@ public abstract class SVGRenderer implements Cloneable {
     }
 
     public abstract void render(Canvas canvas, int width, int height, ColorFilter filter);
+    public float getmAlpha(){
+        return mAlpha;
+    }
 }

@@ -19,7 +19,8 @@ import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
+
 import android.util.AttributeSet;
 import android.widget.ImageButton;
 
@@ -134,7 +135,7 @@ public class SVGImageButton extends ImageButton {
     }
 
     private void resetDrawable(Drawable drawable) {
-        if (drawable != null && drawable instanceof SVGDrawable) {
+        if (drawable instanceof SVGDrawable) {
             drawable.mutate();
             ((SVGDrawable)drawable).setTintList(mSvgColor);
             if (mSvgAlpha > 0 && mSvgAlpha <= 1.0f) {
