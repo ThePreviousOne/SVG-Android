@@ -14,11 +14,11 @@
 
 package com.github.megatronking.svg.support.extend;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import androidx.annotation.Nullable;
 
 import android.util.AttributeSet;
@@ -126,12 +126,7 @@ public class SVGImageButton extends ImageButton {
         boolean isNeedReset = drawable != null && (drawable.getIntrinsicWidth() != mSvgWidth
                 || drawable.getIntrinsicHeight() != mSvgHeight);
         resetDrawable(drawable);
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M && isNeedReset) {
-            super.setImageDrawable(null);
-            super.setImageDrawable(drawable);
-        } else {
-            invalidate();
-        }
+        invalidate();
     }
 
     private void resetDrawable(Drawable drawable) {

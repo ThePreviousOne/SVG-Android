@@ -325,8 +325,7 @@ public class SVGDrawable extends Drawable {
 
     private boolean needMirroring() {
         return isAutoMirrored() &&
-                Build.VERSION.SDK_INT >= 17 &&
-                !(Build.VERSION.SDK_INT >= 23 && getLayoutDirection() != View.LAYOUT_DIRECTION_RTL);
+                !(Build.VERSION.SDK_INT > 22 && getLayoutDirection() != View.LAYOUT_DIRECTION_RTL);
     }
 
     public boolean isAutoMirrored() {
